@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Question for You! ✨</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    h1 { color: #ff4b2b; }
+    p { color: #555; line-height: 1.6; }
+    .btn-group {
+      margin-top: 25px;
+      position: relative;
+      height: 60px;
+    }
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #yesBtn { background: #ff4b2b; color: white; margin-right: 10px; }
+    #noBtn { background: #eee; color: #333; position: absolute; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey Bestie! 👋</h1>
+    <p>I have an important request for you that requires your immediate digital signature!</p>
+    <div class="btn-group">
+      <button id="yesBtn" onclick="alert('I knew you would say YES! 🎉')">YES! ❤️</button>
+      <button id="noBtn" onmouseover="moveNo()">No 😜</button>
+    </div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const btn = document.getElementById('noBtn');
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 100 - 50;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script>
+</body>
+</html>
